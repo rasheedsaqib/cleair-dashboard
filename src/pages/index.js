@@ -1,5 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 const Home = ({data}) => {
     const {channel} = data;
@@ -205,18 +206,24 @@ const Home = ({data}) => {
                                 data being sensed by the sensor. There is one limitation of Tinkercad that we can't use
                                 WIFI Module there because of security reasons. Hence we used an LCD to display data.</p>
                             <h3 id="circuit-diagram">Circuit Diagram</h3><p>
-                                <img alt="Circuit Diagram"
-                                                                                 src="https://github.com/sharryy/cleair/blob/main/assets/circuit-diagram.jpeg"/>
+                                <Image alt="Circuit Diagram" width={800} height={600}
+                                     src="https://raw.githubusercontent.com/sharryy/cleair/main/assets/circuit-diagram.jpeg"/>
                             </p>
                             <h3 id="customization">Customization</h3><p>You can customize the threshold for triggering
                                 the alarm by modifying the value in the if statement in the loop function. For example,
                                 to increase the sensitivity of the smoke detector, you can lower the threshold
                                 value.</p>
-                            <pre><code>if (sensor_Aout &gt; 1000) {
-                                // code to execute if sensor value is above threshold
-                            } else {
-                                // code to execute if sensor value is below threshold
-                            }</code></pre>
+                            <pre><code>
+                                if (sensor_Aout {'>'} 1000) {`{`}
+                                <br/>
+                                <span className='opacity-50'>{'   //'} code to execute if sensor value is above threshold</span>
+                                <br/>
+                                {`}`} else {`{`}
+                                <br/>
+                                <span className='opacity-50'>{'   //'} code to execute if sensor value is below threshold</span>
+                                <br/>
+                                {`}`}
+                            </code></pre>
                             <h3 id="contribute">Contribute</h3><p>We welcome contributions to this project! If you have
                                 an idea for a new feature or have found a bug, please open an issue or submit a pull
                                 request.</p></div>
