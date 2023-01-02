@@ -228,7 +228,7 @@ const Home = ({data}) => {
 }
 
 export const getStaticProps = async () => {
-    const {data} = await axios.get('https://api.thingspeak.com/channels/1992567/feeds.json?api_key=VVMXFIA4TD1OB51E');
+    const {data} = await axios.get(`https://api.thingspeak.com/channels/1992567/feeds.json?api_key=${process.env.THNGSPEAK_KEY}`);
 
     return {
         props: {
