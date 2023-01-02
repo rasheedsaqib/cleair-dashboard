@@ -1,7 +1,14 @@
 import React from 'react';
-import BarChart from "@/components/bar-chart";
-import AreaChart from "@/components/area-chart";
 import axios from "axios";
+import dynamic from "next/dynamic";
+
+const BarChart = dynamic(() => import('@/components/bar-chart'), {
+    ssr: false
+})
+
+const AreaChart = dynamic(() => import('@/components/area-chart'), {
+    ssr: false
+})
 
 const Graphs = ({data}) => {
     const {feeds} = data;
