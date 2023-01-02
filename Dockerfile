@@ -1,4 +1,4 @@
-FROM node:16.17.0-alpine3.15
+FROM node:latest
 
 RUN apk add --no-cache libc6-compat
 RUN npm i -g npm
