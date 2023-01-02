@@ -1,0 +1,6 @@
+.git
+.results
+scripts
+*Dockerfile*
+.env
+**/node_modules
