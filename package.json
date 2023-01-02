@@ -13,12 +13,12 @@
     "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.1",
     "@tailwindcss/typography": "^0.5.8",
+    "apexcharts": "^3.36.3",
     "axios": "^1.2.2",
-    "chart.js": "^4.1.1",
-    "faker": "^6.6.6",
+    "moment": "^2.29.4",
     "next": "13.1.1",
     "react": "18.2.0",
-    "react-chartjs-2": "^5.1.0",
+    "react-apexcharts": "^1.4.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
