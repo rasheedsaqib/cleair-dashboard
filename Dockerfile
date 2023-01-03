@@ -1,30 +1,13 @@
 FROM node:latest
 
-RUN apk add --no-cache libc6-compat
-RUN npm i -g npm
+LABEL maintainer="Shehryar Amin"
 
-EXPOSE 3000
+WORKDIR /usr/src/app/api
 
-ENV PORT 3000
-ENV NODE_ENV production
+COPY package*.json ./
 
-WORKDIR /home/nextjs/app
+RUN npm install
 
-COPY package*.json .
+EXPOSE 3080
 
-RUN npm install --omit=optional
-RUN npx browserslist@latest --update-db
-RUN npx next telemetry disable
-
-RUN npm install -D @swc/cli @swc/core
-
-COPY . .
-
-RUN npm run build
-
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
-USER nextjs
-
-CMD [ "npm", "start" ]
+CMD ["npm", "run", "dev"]
